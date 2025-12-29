@@ -69,6 +69,9 @@ importers:
       nanoid:
         specifier: ^5.1.6
         version: 5.1.6
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
     devDependencies:
       '@types/node':
         specifier: ^22.15.3
@@ -76,12 +79,6 @@ importers:
       eslint:
         specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
-      postcss:
-        specifier: ^8.5.6
-        version: 8.5.6
-      tailwindcss:
-        specifier: ^4.0.0
-        version: 4.1.18
       tsdown:
         specifier: ^0.18.3
         version: 0.18.3(typescript@5.9.2)
@@ -91,49 +88,6 @@ importers:
       vitest:
         specifier: ^4.0.16
         version: 4.0.16(@types/node@22.15.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)
-
-  packages/randomizer/test/fixtures/next-webpack:
-    dependencies:
-      next:
-        specifier: 16.1.1
-        version: 16.1.1(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 19.2.3
-        version: 19.2.3
-      react-dom:
-        specifier: 19.2.3
-        version: 19.2.3(react@19.2.3)
-    devDependencies:
-      '@tailwindcss/postcss':
-        specifier: ^4
-        version: 4.1.18
-      '@types/node':
-        specifier: ^20
-        version: 20.19.27
-      '@types/react':
-        specifier: ^19
-        version: 19.2.2
-      '@types/react-dom':
-        specifier: ^19
-        version: 19.2.2(@types/react@19.2.2)
-      '@types/webpack':
-        specifier: ^5.28.5
-        version: 5.28.5
-      eslint:
-        specifier: ^9
-        version: 9.39.1(jiti@2.6.1)
-      eslint-config-next:
-        specifier: 16.1.1
-        version: 16.1.1(@typescript-eslint/parser@8.50.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
-      randomizer:
-        specifier: workspace:*
-        version: link:../../..
-      tailwindcss:
-        specifier: ^4
-        version: 4.1.18
-      typescript:
-        specifier: ^5
-        version: 5.9.2
 
 packages:
 
