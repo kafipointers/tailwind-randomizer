@@ -9,7 +9,8 @@
     "check-types": "turbo run check-types",
     "build:randomizer": "turbo run build --filter=randomizer",
     "dev:web": "turbo run dev --filter=web",
-    "clean": "rm -rf apps/www/.next"
+    "clean": "rm -rf apps/www/.next",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "prettier": "^3.7.4",

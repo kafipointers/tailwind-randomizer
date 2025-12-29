@@ -20,13 +20,17 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "build": "tsdown"
+    "build": "tsdown",
+    "test": "vitest"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",
     "eslint": "^9.39.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.0.0",
     "typescript": "5.9.2",
-    "tsdown": "^0.18.3"
+    "tsdown": "^0.18.3",
+    "vitest": "^4.0.16"
   },
   "dependencies": {
     "@swc/core": "^1.15.7",

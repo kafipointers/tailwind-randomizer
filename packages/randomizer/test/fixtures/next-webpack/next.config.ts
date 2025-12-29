@@ -2,9 +2,10 @@
 
 import { createRequire } from "node:module";
 import type { Configuration } from "webpack";
+import { NextConfig } from "next";
 const require = createRequire(import.meta.url);
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   webpack(config: Configuration) {
     config.module?.rules?.unshift({
       test: /\.(tsx|ts|jsx|js|mjs)$/,
