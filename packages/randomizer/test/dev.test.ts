@@ -6,6 +6,7 @@ import {
   acquireLock,
   releaseLock,
   cleanupNextDir,
+  buildPackage,
   FIXTURE_DIR,
   CLASS_MAP_FILE,
   NEXT_DIR,
@@ -17,6 +18,7 @@ describe("Dev Server Obfuscation", () => {
   const BASE_URL = `http://localhost:${PORT}`;
 
   beforeAll(async () => {
+    await buildPackage();
     await acquireLock();
 
     await cleanupNextDir();
@@ -24,7 +26,6 @@ describe("Dev Server Obfuscation", () => {
     devProcess = spawn("pnpm", ["dev"], {
       cwd: FIXTURE_DIR,
       stdio: "pipe",
-      shell: true,
       env: {
         ...process.env,
         PORT: PORT.toString(),

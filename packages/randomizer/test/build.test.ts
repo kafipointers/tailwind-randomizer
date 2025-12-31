@@ -8,6 +8,7 @@ import {
   waitForLockRelease,
   cleanupNextDir,
   cleanupClassMap,
+  buildPackage,
   FIXTURE_DIR,
   CLASS_MAP_FILE,
   NEXT_DIR,
@@ -19,6 +20,7 @@ describe("Build Server Obfuscation", () => {
   const BASE_URL = `http://localhost:${PORT}`;
 
   beforeAll(async () => {
+    await buildPackage();
     await waitForLockRelease(120); // Wait up to 2 minutes
     await acquireLock();
     await cleanupClassMap();
@@ -28,7 +30,6 @@ describe("Build Server Obfuscation", () => {
       const buildProcess = spawn("pnpm", ["build"], {
         cwd: FIXTURE_DIR,
         stdio: "pipe",
-        shell: true,
         env: {
           ...process.env,
         },
@@ -65,7 +66,6 @@ describe("Build Server Obfuscation", () => {
     startProcess = spawn("pnpm", ["start"], {
       cwd: FIXTURE_DIR,
       stdio: "pipe",
-      shell: true,
       env: {
         ...process.env,
         PORT: PORT.toString(),

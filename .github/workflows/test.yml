@@ -30,8 +30,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build plugin
-        run: pnpm build:randomizer
-
       - name: Run tests
         run: pnpm test
