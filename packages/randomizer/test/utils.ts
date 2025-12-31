@@ -1,7 +1,6 @@
 import { existsSync } from "fs";
 import { promises as fs } from "fs";
 import path from "path";
-import { spawn } from "child_process";
 
 const FIXTURE_DIR = path.join(process.cwd(), "test/fixtures/next-webpack");
 const NEXT_DIR = path.join(FIXTURE_DIR, ".next");
@@ -204,51 +203,6 @@ export async function ensureCleanup(): Promise<void> {
   } catch (error) {
     console.warn("Cleanup warning:", error);
   }
-}
-
-/**
- * Build the randomizer package before running tests
- */
-export async function buildPackage(): Promise<void> {
-  const packageDir = path.join(process.cwd());
-
-  return new Promise<void>((resolve, reject) => {
-    const buildProcess = spawn("pnpm", ["build"], {
-      cwd: packageDir,
-      stdio: "pipe",
-      env: {
-        ...process.env,
-      },
-    });
-
-    let buildOutput = "";
-
-    buildProcess.stdout?.on("data", (data: Buffer) => {
-      const output = data.toString();
-      buildOutput += output;
-    });
-
-    buildProcess.stderr?.on("data", (data: Buffer) => {
-      const output = data.toString();
-      buildOutput += output;
-    });
-
-    buildProcess.on("close", (code) => {
-      if (code === 0) {
-        resolve();
-      } else {
-        reject(
-          new Error(
-            `Package build failed with exit code ${code}\n${buildOutput}`,
-          ),
-        );
-      }
-    });
-
-    buildProcess.on("error", (error) => {
-      reject(error);
-    });
-  });
 }
 
 export { FIXTURE_DIR, NEXT_DIR, CLASS_MAP_FILE };

@@ -8,7 +8,6 @@ import {
   waitForLockRelease,
   cleanupNextDir,
   cleanupClassMap,
-  buildPackage,
   FIXTURE_DIR,
   CLASS_MAP_FILE,
   NEXT_DIR,
@@ -20,7 +19,6 @@ describe("Build Server Obfuscation", () => {
   const BASE_URL = `http://localhost:${PORT}`;
 
   beforeAll(async () => {
-    await buildPackage();
     await waitForLockRelease(120); // Wait up to 2 minutes
     await acquireLock();
     await cleanupClassMap();
