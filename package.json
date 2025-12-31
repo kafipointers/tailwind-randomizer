@@ -6,11 +6,14 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "build:randomizer": "turbo run build --filter=randomizer",
     "dev:web": "turbo run dev --filter=web",
     "clean": "rm -rf apps/www/.next",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "release": "changeset version",
+    "pub:release": "pnpm build && pnpm publish --access public"
   },
   "devDependencies": {
     "prettier": "^3.7.4",
@@ -20,5 +23,9 @@
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@changesets/changelog-github": "^0.5.2",
+    "@changesets/cli": "^2.29.8"
   }
 }
