@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@3.1.2/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "Indian-Tech-Support/randomizer" }
+    { "repo": "kafipointers/tailwind-randomizer" }
   ],
   "commit": false,
   "fixed": [],
