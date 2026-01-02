@@ -31,7 +31,7 @@
     "vitest": "^4.0.16"
   },
   "dependencies": {
-    "@swc/core": "^1.15.7",
+    "@swc/core": "^1.15.8",
     "nanoid": "^5.1.6"
   },
   "peerDependencies": {
