@@ -100,7 +100,7 @@ This workflow ensures that you are running the most recent version of the regist
 
 ## Documentation
 
-The documentation for this project is located in the [randomizer package](./packages/randomizer/README.md`).
+The documentation for this project is located in the [README](./packages/randomizer/README.md).
 
 ## Commit Convention
 
