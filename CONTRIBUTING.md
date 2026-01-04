@@ -21,15 +21,13 @@ This repository is structured as follows:
 ```
 apps
 └── www
-    ├── app
-    └── content
 packages
 └── randomizer
 ```
 
 | Path                  | Description                              |
 | --------------------- | ---------------------------------------- |
-| `apps/www/app`        | The Next.js application for the website. |
+| `apps/www`            | The Next.js application for the website. |
 | `packages/randomizer` | The `tailwind-randomizer` package.       |
 
 ## Development
@@ -77,7 +75,7 @@ pnpm --filter=www dev
 1. To run the `tailwind-randomizer` package:
 
 ```bash
-pnpm --filter=tailwind-randomizer dev
+pnpm --filter=randomizer dev
 ```
 
 ## Running the CLI Locally
@@ -132,7 +130,7 @@ the following categories:
   e.g. `feat: add new config options to the plugin`
 
 If you are interested in the detailed specification you can visit
-<https://www.conventionalcommits.org/> or check out the
+[conventionalcommits.org](https://www.conventionalcommits.org/) or check out the
 [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
 ## Testing

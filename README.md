@@ -1,10 +1,10 @@
 # tailwind-randomizer
 
-A webpack+postcss plugin that obfuscates Tailwind class names. **Use the plugin to secure your UI code so noone can copy them**
+A webpack+postcss plugin that obfuscates tailwindcss class names. **Use the plugin to secure your frontend**
 
 ## Documentation
 
-Visit <https://github.com/kafipointers/tailwind-randomizer/tree/main/packages/randomizer#readme> to view the documentation.
+Visit [This README](https://github.com/kafipointers/tailwind-randomizer/tree/main/packages/randomizer#readme) to view the documentation.
 
 ## Contributing
 

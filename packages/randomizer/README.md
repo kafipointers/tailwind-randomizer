@@ -34,7 +34,7 @@ const nextConfig: NextConfig = {
       enforce: "pre",
       use: [
         {
-          loader: require.resolve("randomizer/bundler-plugin"),
+          loader: require.resolve("tailwind-randomizer/bundler-plugin"),
           options: {},
         },
       ],
@@ -47,6 +47,8 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ```
 
+Make sure you are running `dev` and `build` with the `--weboack` flag if you opt into webpack.
+
 ### Setup postcss plugin
 
 finally, setup the plugin in postcss-config (`postcss.config.mjs)`) for final obsfuscation of the class names.
@@ -55,7 +57,7 @@ finally, setup the plugin in postcss-config (`postcss.config.mjs)`) for final ob
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
-    "randomizer/postcss-plugin": {},
+    "tailwind-randomizer/postcss-plugin": {},
   },
 };
 
