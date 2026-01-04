@@ -1,7 +1,7 @@
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
-    "randomizer/postcss-plugin": {},
+    "tailwind-randomizer/postcss-plugin": {},
   },
 };
 

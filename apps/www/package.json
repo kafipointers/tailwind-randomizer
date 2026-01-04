@@ -21,7 +21,7 @@
     "@types/webpack": "^5.28.5",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
-    "randomizer": "workspace:*",
+    "tailwind-randomizer": "workspace:*",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

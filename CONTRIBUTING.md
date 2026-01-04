@@ -22,13 +22,13 @@ This repository is structured as follows:
 apps
 └── www
 packages
-└── randomizer
+└── tailwind-randomizer
 ```
 
-| Path                  | Description                              |
-| --------------------- | ---------------------------------------- |
-| `apps/www`            | The Next.js application for the website. |
-| `packages/randomizer` | The `tailwind-randomizer` package.       |
+| Path                           | Description                              |
+| ------------------------------ | ---------------------------------------- |
+| `apps/www`                     | The Next.js application for the website. |
+| `packages/tailwind-randomizer` | The `tailwind-randomizer` package.       |
 
 ## Development
 
@@ -75,14 +75,14 @@ pnpm --filter=www dev
 1. To run the `tailwind-randomizer` package:
 
 ```bash
-pnpm --filter=randomizer dev
+pnpm --filter=tailwind-randomizer dev
 ```
 
 ## Running the CLI Locally
 
 To run the CLI locally, you can follow the workflow:
 
-1. Start by running the dev server:
+1. Start by building the tailwind-randomizer package:
 
    ```bash
    pnpm build:randomizer
@@ -100,7 +100,7 @@ This workflow ensures that you are running the most recent version of the regist
 
 ## Documentation
 
-The documentation for this project is located in the [README](./packages/randomizer/README.md).
+The documentation for this project is located in the [README](./packages/tailwind-randomizer/README.md).
 
 ## Commit Convention
 

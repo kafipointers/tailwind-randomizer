@@ -12,7 +12,7 @@ const nextConfig = {
       enforce: "pre",
       use: [
         {
-          loader: require.resolve("randomizer/bundler-plugin"),
+          loader: require.resolve("tailwind-randomizer/bundler-plugin"),
           options: {},
         },
       ],

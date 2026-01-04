@@ -4,7 +4,7 @@ A webpack+postcss plugin that obfuscates tailwindcss class names. **Use the plug
 
 ## Documentation
 
-Visit [This README](https://github.com/kafipointers/tailwind-randomizer/tree/main/packages/randomizer#readme) to view the documentation.
+Visit [This README](https://github.com/kafipointers/tailwind-randomizer/tree/main/packages/tailwind-randomizer#readme) to view the documentation.
 
 ## Contributing
 

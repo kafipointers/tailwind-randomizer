@@ -8,7 +8,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "build:randomizer": "turbo run build --filter=randomizer",
+    "build:randomizer": "turbo run build --filter=tailwind-randomizer",
     "dev:web": "turbo run dev --filter=web",
     "clean": "rm -rf apps/www/.next",
     "test": "turbo run test",

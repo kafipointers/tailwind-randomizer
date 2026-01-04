@@ -47,7 +47,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kafipointers/tailwind-randomizer.git",
-    "directory": "packages/randomizer"
+    "directory": "packages/tailwind-randomizer"
   },
   "files": [
     "dist"
