@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ```
 
-Make sure you are running `dev` and `build` with the `--weboack` flag if you opt into webpack.
+Make sure you are running `dev` and `build` with the `--webpack` flag if you opt into webpack.
 
 ### Setup postcss plugin
 
