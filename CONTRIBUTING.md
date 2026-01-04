@@ -133,6 +133,15 @@ If you are interested in the detailed specification you can visit
 [conventionalcommits.org](https://www.conventionalcommits.org/) or check out the
 [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
+## Changesets
+
+We handle releases with [Changesets](https://github.com/changesets/changesets).
+If your change affects the plugin package, do remember to run the following command and proceed respectively.
+
+```bash
+pnpm dlx @changesets/cli
+```
+
 ## Testing
 
 Tests are written using [Vitest](https://vitest.dev). You can run all the tests from the root of the repository.
