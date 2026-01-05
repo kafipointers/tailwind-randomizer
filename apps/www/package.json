@@ -24,5 +24,6 @@
     "tailwind-randomizer": "workspace:*",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "private": "true"
 }
