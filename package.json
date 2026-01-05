@@ -9,7 +9,7 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "build:randomizer": "turbo run build --filter=tailwind-randomizer",
-    "dev:web": "turbo run dev --filter=web",
+    "dev:www": "turbo run dev --filter=www",
     "clean": "rm -rf apps/www/.next",
     "test": "turbo run test",
     "release": "changeset version",
