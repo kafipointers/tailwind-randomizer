@@ -7,6 +7,11 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     name: Create a PR for release workflow
@@ -23,13 +28,18 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
+
+      - name: Update npm for OIDC support
+        run: npm install -g npm@latest
 
       - name: Install NPM Dependencies
         run: pnpm install
 
       - name: Build the package
-        run: pnpm build
+        run: pnpm build:randomizer
 
       - name: Create Version PR or Publish to NPM
         id: changesets
@@ -38,8 +48,7 @@ jobs:
           commit: "chore(release): version packages"
           title: "chore(release): version packages"
           version: node .github/changeset-version.js
-          publish: pnpm dlx changeset publish
+          publish: npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
           NODE_ENV: "production"
